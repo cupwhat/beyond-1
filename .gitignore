@@ -61,3 +61,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+# Beyond setting
+!mysql-connector-java-5.1.40.jar
+!ojdbc14-10.2.0.4.0.jar

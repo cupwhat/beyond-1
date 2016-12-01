@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+<!--   <classPathEntry location="/workspace/beyond/src/main/resources/ojdbc14-10.2.0.4.0.jar" /> -->
+  <classPathEntry location="/workspace/beyond/src/main/resources/mysql-connector-java-5.1.40.jar" />
+
+  <context id="OrclTables" targetRuntime="MyBatis3">
+<!--     <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" -->
+<!--         connectionURL="jdbc:oracle:thin:@192.168.90.127:1521:mhc9000" -->
+<!--         userId="MHC" -->
+<!--         password="MHC"> -->
+<!--     </jdbcConnection> -->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://localhost:3306/beyond"
+        userId="root"
+        password="6262">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.bs.beyond.entity" targetProject="/workspace/beyond/src/main/resources/">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="com.bs.beyond.dao"  targetProject="/workspace/beyond/src/main/resources/">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+	<!-- ANNOTATEDMAPPER MIXEDMAPPER XMLMAPPER -->
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.bs.beyond.dao" targetProject="/workspace/beyond/src/main/resources/">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <table tableName="B_USER" domainObjectName="BUser"
+       enableCountByExample="false" enableUpdateByExample="false"
+       enableDeleteByExample="false" enableSelectByExample="false"
+       selectByExampleQueryId="false">
+    </table>
+    
+  </context>
+</generatorConfiguration>
