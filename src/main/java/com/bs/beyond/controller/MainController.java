@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.bs.beyond.Const;
+import com.bs.beyond.AppConst;
+import com.bs.beyond.bo.BUserBO;
 import com.bs.beyond.core.BsController;
 import com.bs.beyond.core.annotation.BLogger;
 import com.bs.beyond.entity.BUser;
@@ -28,15 +29,15 @@ public class MainController extends BsController {
         HttpSession session,
         HttpServletRequest request)
 	{
-		Object objToken = session.getAttribute(Const.BEYOND_TOKEN);
+		Object objToken = session.getAttribute(AppConst.BEYOND_TOKEN);
 		String sUserName = null;
 		if (objToken != null)
 		{
-			BUser bUser = (BUser)objToken;
-			sUserName = bUser.getUserName();
+			BUserBO bUserBO = (BUserBO)objToken;
+			sUserName = bUserBO.getUserName();
 		}
 
-		ModelAndView mv = new ModelAndView(Const.URL.VIEW_MAIN);
+		ModelAndView mv = new ModelAndView(AppConst.URL.VIEW_MAIN);
 
 		if (sUserName != null)
 		{
@@ -71,9 +72,9 @@ public class MainController extends BsController {
 	@RequestMapping(value="test")
 	public ModelAndView test()
 	{
-		ModelAndView mv = new ModelAndView(Const.URL.VIEW_MAIN);
+		ModelAndView mv = new ModelAndView(AppConst.URL.VIEW_MAIN);
 
-//        mv.addObject("XXXX", "XXXX");
+        mv.addObject("testLabel", "Hello Test");
 	    return mv;
 	}
 }

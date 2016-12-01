@@ -2,6 +2,10 @@
  * 
  */
 
+var ResultCode = {
+	Success : "1",
+	Fail : "0"
+}
 
 /**
  * Key
@@ -173,4 +177,25 @@ function getLength(s) {
  return length;
 }
 
+function showMessage(msg) {
 
+	$("#bsError").hide();
+	$("#bsMsg").show();
+	$("#bsMsg").html(msg);
+	
+
+//	$("#bsMsg").addClass("errorMsg");
+//	$("#bsMsg").html(dmsg);
+//	$("#bsMsg").show();
+}
+
+function showError(msg) {
+
+	$("#bsMsg").hide();
+	$("#bsError").show();
+	$("#bsError").html(msg);
+
+//	$("#bsMsg").removeClass("errorMsg");
+//	$("#bsMsg").html(msg);
+//	$("#bsMsg").show();
+}

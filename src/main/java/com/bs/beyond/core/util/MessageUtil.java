@@ -1,23 +1,16 @@
-package com.bs.beyond.util;
-
-import java.util.Locale;
+package com.bs.beyond.core.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
+import com.bs.beyond.AppConst;
+
 @Component
 public class MessageUtil
 {
-
 	@Autowired
     private MessageSource messageSource;
-
-    private Locale locale = Locale.ENGLISH;
-
-    public MessageUtil()
-    {
-    }
 
     /**
      * get the message without params
@@ -27,7 +20,7 @@ public class MessageUtil
      */
     public String getMessage(String key)
     {
-        return messageSource.getMessage(key, null, locale);
+        return messageSource.getMessage(key, null, AppConst.locale);
     }
 
     /**
@@ -39,6 +32,7 @@ public class MessageUtil
      */
     public String getMessage(String key, Object... arg)
     {
-        return messageSource.getMessage(key, arg, locale);
+        return messageSource.getMessage(key, arg, AppConst.locale);
     }
+
 }
