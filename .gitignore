@@ -70,4 +70,4 @@ $RECYCLE.BIN/
 .classpath
 /.settings/
 /target/
-/src/main/resources/com/*.*
+/src/main/resources/com/
