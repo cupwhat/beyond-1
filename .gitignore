@@ -64,6 +64,7 @@ $RECYCLE.BIN/
 
 
 # Beyond setting
+!json-lib-2.2.3.jar
 !mysql-connector-java-5.1.40.jar
 !ojdbc14-10.2.0.4.0.jar
 .project
