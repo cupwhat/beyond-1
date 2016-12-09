@@ -42,6 +42,9 @@
        <property name="useCodeAsDefaultMessage" value="true"/>
     </bean>
     
+    <bean id="dateFormatUtils" class="org.apache.commons.lang.time.DateFormatUtils"></bean>
+    <bean id="dateUtils" class="org.apache.commons.lang.time.DateUtils"></bean>
+    
     <mvc:annotation-driven />
     <!-- Interceptors -->
     <mvc:interceptors>

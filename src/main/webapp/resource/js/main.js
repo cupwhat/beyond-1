@@ -40,6 +40,17 @@ function test(){
     window.location.href = "test.do";
 }
 
+/**
+ * Test
+ */
+function regular(){
+	
+    window.location.href = "regular.do";
+}
+
+
+
+
 var bUser = {
     userName : "BS",
     password : "12"

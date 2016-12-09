@@ -12,6 +12,14 @@
     
     <link rel="stylesheet" type="text/css" href="resource/css/common.css">
     
+    
+    <script type="text/javascript" src="resource/js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="resource/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="resource/js/jquery.i18n.properties.js"></script>
+    
+    <script type="text/javascript" src="resource/js/common.js"></script>
+    <script type="text/javascript" src="resource/js/main.js"></script>
 </head>
 <body>
     <h2><fmt:message key="msg.beyond.main.title.business" />&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;${userName}</h2>
@@ -27,6 +35,9 @@
             <a href="javascript:void(0)" class="easyui-linkbutton" onclick="register()" style="width:80px">Register</a>
             <!-- href="#" ： for refreshing ${xx} tag. (eg: ${userName}) -->
             <a href="#" class="easyui-linkbutton" onclick="logout()" style="width:80px">Logout</a>
+            
+            <p></p>
+            <a href="#" class="easyui-linkbutton" onclick="regular()" style="width:80px">Regular</a>
         </div>
     </div>
     <div style="margin:10px 0;"></div>
@@ -41,13 +52,5 @@
     </div>
     <div style="margin:20px 0;"></div>
     
-    
-    <script type="text/javascript" src="resource/js/jquery.min.js"></script>
-    
-    <script type="text/javascript" src="resource/easyui/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="resource/js/jquery.i18n.properties.js"></script>
-    
-    <script type="text/javascript" src="resource/js/common.js"></script>
-    <script type="text/javascript" src="resource/js/main.js"></script>
 </body>
 </html>

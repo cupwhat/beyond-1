@@ -17,6 +17,8 @@ public class AppConst {
 		public static final String VIEW_LOGIN = "login";
 		public static final String VIEW_REGISTER = "register";
 		public static final String VIEW_TEST = "test";
+
+        public static final String VIEW_REGULAR = "regular/regular";
 	}
 	
 	static
