@@ -17,7 +17,7 @@
 
     <!-- Log File -->
     <appender name="FILE" class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="/output.log" />
+        <param name="File" value="/Users/bettersun/log/output.log" />
         <param name="Append" value="true" />
         <param name="MaxBackupIndex" value="10" />
         <layout class="org.apache.log4j.PatternLayout">
